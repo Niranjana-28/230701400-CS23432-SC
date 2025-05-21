@@ -1,0 +1,215 @@
+/* Chatbot Icon */
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6347; /* Changed to a vibrant coral color */
+  color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  animation: bounceIcon 2s ease infinite; /* Added bouncing animation */
+}
+
+.chatbot-icon:hover {
+  background-color: #e53e36; /* Darker coral on hover */
+  transform: scale(1.1);
+}
+
+/* Chatbot Window */
+.chatbot-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 360px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-height: 500px;
+  z-index: 1000;
+  animation: slideIn 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.4s ease;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+  background-color: #ff6347; /* Coral color */
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.chatbot-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.chatbot-header button:hover {
+  color: #f1f1f1;
+}
+
+/* Chatbot Messages */
+.chatbot-messages {
+  padding: 12px;
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 350px;
+}
+
+.chatbot-msg {
+  background-color: #e6f7ff; /* Light blue for bot messages */
+  margin: 10px 0;
+  padding: 14px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.chatbot-msg.bot {
+  background-color: #ffebd6; /* Light peach for bot */
+  color: #333;
+  align-self: flex-start;
+}
+
+.chatbot-msg.user {
+  background-color: #e0f7fa; /* Light cyan for user */
+  align-self: flex-end;
+}
+
+/* Typing animation for bot */
+.typing-animation {
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-left: 5px;
+  animation: typingDots 1.5s steps(5, end) infinite;
+}
+
+@keyframes typingDots {
+  0% {
+    content: ".";
+  }
+  25% {
+    content: "..";
+  }
+  50% {
+    content: "...";
+  }
+  75% {
+    content: "..";
+  }
+  100% {
+    content: ".";
+  }
+}
+
+/* Category Buttons */
+.category-button button {
+  background-color: #ff6347; /* Coral color for buttons */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: fadeInButton 0.6s ease-out;
+}
+
+.category-button button:hover {
+  background-color: #e53e36; /* Darker coral on hover */
+}
+
+/* Chatbot Input */
+.chatbot-input {
+  display: flex;
+  padding: 12px;
+  background-color: #f4f7f9;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.chatbot-input input:focus {
+  border-color: #ff6347; /* Highlight input on focus */
+}
+
+.chatbot-input button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #ff6347;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-input button:hover {
+  background-color: #e53e36; /* Darker coral on hover */
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {        
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInMessage {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

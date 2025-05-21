@@ -1,0 +1,105 @@
+.mobiles-container {
+  padding: 30px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.mobiles-container h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.mobiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.mobile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-img-container {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.mobile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 15px;
+}
+
+.mobile-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.view-details,
+.add-to-cart {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details {
+  background-color: #007bff;
+  color: white;
+}
+
+.view-details:hover {
+  background-color: #0056b3;
+}
+
+.add-to-cart {
+  background-color: #28a745;
+  color: white;
+}
+
+.add-to-cart:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .mobiles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .mobile-card {
+    width: 250px;
+  }
+}
